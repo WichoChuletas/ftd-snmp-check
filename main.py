@@ -39,7 +39,7 @@ def command_cycle():
     net_connect.disconnect()
 
 if __name__ == "__main__":
-    schedule.every(1).minutes.do(command_cycle)
+    schedule.every(15).minutes.do(command_cycle)
     configure_log()
     while True:
         schedule.run_pending()
