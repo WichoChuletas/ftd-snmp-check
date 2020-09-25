@@ -10,18 +10,18 @@ device = {
     "password": "Tecel2020!"
 }
 def configure_log():
-        """
-        Creates the logs subdirectory if there is none, and configures the actual log.
-        """
-        path = Path(__file__).parent
-        path = (path / "logs/").resolve()
-        if not Path.exists(path):
-            Path.mkdir(path)
-        log_filename = datetime.now().strftime('{}/logfile_%H_%M_%S_%d_%m_%Y.log'.format(path))
-        print('The data will be stored in: {}'.format(log_filename))
-        logging.basicConfig(filename=log_filename, level=logging.INFO)
-        logging.getLogger("paramiko").setLevel(logging.WARNING)
-        logging.getLogger("schedule").setLevel(logging.WARNING)
+    """
+    Creates the logs subdirectory if there is none, and configures the actual log.
+    """
+    path = Path(__file__).parent
+    path = (path / "logs/").resolve()
+    if not Path.exists(path):
+        Path.mkdir(path)
+    log_filename = datetime.now().strftime('{}/logfile_%H_%M_%S_%d_%m_%Y.log'.format(path))
+    print('The data will be stored in: {}'.format(log_filename))
+    logging.basicConfig(filename=log_filename, level=logging.INFO)
+    logging.getLogger("paramiko").setLevel(logging.WARNING)
+    logging.getLogger("schedule").setLevel(logging.WARNING)
 
 def command_cycle():
     """
