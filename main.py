@@ -5,9 +5,9 @@ import os, time, logging,schedule
 
 device = {
     "device_type": "autodetect",
-    "host": "10.11.0.90",
+    "host": "10.201.72.28",
     "username": "admin",
-    "password": "c1SC0123.."
+    "password": "Tecel2020!"
 }
 def configure_log():
         """
