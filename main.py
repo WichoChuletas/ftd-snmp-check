@@ -41,6 +41,7 @@ def command_cycle():
 if __name__ == "__main__":
     schedule.every(15).minutes.do(command_cycle)
     configure_log()
+    command_cycle()
     while True:
         schedule.run_pending()
         time.sleep(1)
